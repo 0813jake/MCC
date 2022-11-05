@@ -1,1 +1,4 @@
-asd
+command /build_start:
+  trigger:
+    if player is op:
+      a
