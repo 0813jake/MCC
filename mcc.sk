@@ -1,0 +1,7 @@
+command /mcc [<string>]:
+    trigger:
+        if player is op:
+            if arg-1 is "build":
+                broadcast "Build Contest is start soon! Get ready!"
+        else:
+            send message "This command is allowed to OP" to player
