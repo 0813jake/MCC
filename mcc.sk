@@ -13,6 +13,12 @@ command /mcc [<string>]:
                     execute op command "/give @s compass"
                     execute op command "/give @s wooden_axe"
                     
-                scoreboard objectives
+                execute console command "scoreboard objectives remove time"
+                execute console command "scoreboard objectives add time dummy"
+                execute console command "scoreboard objectives setdisplay time "
+                
+                every 1 seconds:
+                
+                
         else:
             send message "This command is allowed to OP" to player
