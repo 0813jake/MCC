@@ -1,0 +1,21 @@
+command /mcc_build:
+    trigger:
+        if player is op:
+            send message "Launched BUILD command" to player
+            broadcast "Build Contest is start soon! Get ready!"
+            wait 3 seconds
+                
+            loop all players:
+                execute console command "op %loop-player%"
+                wait 0.1 seconds
+                execute op command "/clear @s"
+                execute op command "/give @s compass"
+                execute op command "/give @s wooden_axe"
+                    
+            execute console command "scoreboard objectives remove time"
+            execute console command "scoreboard objectives add time dummy"
+            execute console command "scoreboard objectives setdisplay time "
+                
+            every 1 seconds:
+        else:
+            send message "This command is allowed to OP" to player
